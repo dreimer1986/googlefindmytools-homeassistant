@@ -1,9 +1,9 @@
 services:
   google-find-my-tools:
-    image: ghcr.io/txitxo0/googlefindmytools-homeassistant:latest
+    image: ghcr.io/dreimer1986/googlefindmytools-homeassistant:latest
     container_name: google-find-my-tools
     restart: unless-stopped
     volumes:
-      - ./auth/secrets.json:/app/auth/secrets.json:ro
+      - ./auth/secrets.json:/app/auth/secrets.json:z
     # Environment variables are loaded automatically from the .env file
     # in the same directory, which is the recommended practice.
