@@ -6,6 +6,11 @@ import os
 from NovaApi.ListDevices.nbe_list_devices import list_devices
 from auth.fcm_receiver import FcmReceiver
 
+os.environ["MQTT_BROKER"] = "192.168.181.42"
+os.environ["MQTT_USERNAME"] = "mqtt"
+os.environ["MQTT_PASSWORD"] = "12341234"
+os.environ["REFRESH_INTERVAL"] = "300"
+
 def check_and_run_auth_flow():
     secrets_path = os.path.join('auth', 'secrets.json')
     if not os.path.exists(secrets_path):
