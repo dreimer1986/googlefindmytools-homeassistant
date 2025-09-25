@@ -38,15 +38,10 @@ if SEMANTIC_MAPPING_STR:
         )
 
 # MQTT Configuration
-try:
-    MQTT_BROKER = os.environ["MQTT_BROKER"]
-except KeyError:
-    logger.error("FATAL: The MQTT_BROKER environment variable is not set. Please set it to your MQTT broker's address.")
-    exit(1)
-
+MQTT_BROKER = "192.168.181.42"
 MQTT_PORT = int(os.environ.get("MQTT_PORT", 1883))
-MQTT_USERNAME = os.environ.get("MQTT_USERNAME")  # Set your MQTT username if required
-MQTT_PASSWORD = os.environ.get("MQTT_PASSWORD")  # Set your MQTT password if required
+MQTT_USERNAME = "mqtt"  # Set your MQTT username if required
+MQTT_PASSWORD = "12341234"  # Set your MQTT password if required
 MQTT_CLIENT_ID = f"{os.environ.get('MQTT_CLIENT_ID', 'google_find_my_publisher')}_{petname.Generate(3, '')}"
 REFRESH_INTERVAL = int(os.environ.get("REFRESH_INTERVAL", 300))  # Default: 300s (5 minutes)
 
