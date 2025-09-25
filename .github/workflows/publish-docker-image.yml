@@ -1,9 +1,10 @@
 name: Publish Docker image
 
 on:
-  # Run this workflow every time a change is pushed to the 'main' branch
   push:
-    branches: ['main']
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   push_to_registry:
