@@ -7,7 +7,7 @@ from NovaApi.ListDevices.nbe_list_devices import list_devices
 from auth.fcm_receiver import FcmReceiver
 
 def check_and_run_auth_flow():
-    secrets_path = os.path.join('auth', 'secrets.json')
+    secrets_path = os.path.join('config', 'secrets.json')
     if not os.path.exists(secrets_path):
         print("auth/secrets.json not found. Running authentication flow...")
         try:
