@@ -1,0 +1,21 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: GoogleFindMyTools add-on
+version: "1.0"
+slug: googlefindmytools
+description: GoogleFindMyTools add-on
+services:
+  - "mqtt:want"
+homeassistant_api: true
+url: "https://github.com/dreimer1986/googlefindmytools-homeassistant"
+arch:
+  - amd64
+init: false
+map:
+  - addon_config:rw
+options:
+  loglevel: DEBUG
+  logtofile: false
+schema:
+  loglevel: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)
+  logtofile: bool
+image: "ghcr.io/dreimer1986/googlefindmytools-homeassistant"
