@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: GoogleFindMyTools add-on repository
+url: 'https://github.com/dreimer1986/googlefindmytools-homeassistant'
+maintainer: dreimer1986
