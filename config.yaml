@@ -11,7 +11,9 @@ arch:
   - amd64
 init: false
 map:
-  - addon_config:rw
+- type: addon_config
+  read_only: true
+  path: /app/auth
 options:
   loglevel: DEBUG
   logtofile: false
