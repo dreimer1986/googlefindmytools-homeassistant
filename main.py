@@ -9,7 +9,7 @@ from auth.fcm_receiver import FcmReceiver
 def check_and_run_auth_flow():
     secrets_path = os.path.join('config', 'secrets.json')
     if not os.path.exists(secrets_path):
-        print("auth/secrets.json not found. Running authentication flow...")
+        print("config/secrets.json not found. Running authentication flow...")
         try:
             from chrome_driver import create_and_get_driver
             from auth.auth_flow import auth_flow
