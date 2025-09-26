@@ -13,7 +13,7 @@ init: false
 map:
 - type: addon_config
   read_only: true
-  path: /app/auth
+  path: /app/authdump
 options:
   loglevel: DEBUG
   logtofile: false
